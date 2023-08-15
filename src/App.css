@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+.tempimg{
+  filter: contrast(0.9);
+  filter: brightness(0.7);
+}
+.mb-3{
+  text-align: center;
+}
