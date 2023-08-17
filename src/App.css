@@ -52,3 +52,10 @@ input[type=number]{
 .mb-3{
   text-align: center;
 }
+.dropdown{
+  width: fit-content;
+  height: 2.3rem;
+}
+.error{
+  margin-left: 20%;
+}
