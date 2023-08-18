@@ -46,7 +46,7 @@ const Converter = () => {
                     else
                         result = temp;
                 }
-                document.getElementById('disabled-input').innerHTML = result;
+                document.getElementById('disabled-input').value = result;
 
             }
             else
@@ -56,7 +56,7 @@ const Converter = () => {
 
     return (
 
-        <div className="card">
+        <div className="card"  style={{backgroundColor:'#F6F4EB'}}>
             <h5 className="card-header text-center">Temperature Converter</h5>
             <div className="card-body">
                 <div className="row">
@@ -64,7 +64,7 @@ const Converter = () => {
                         <div className="input-group mb-3">
                             <input type="number" className="form-control rounded" value={temp} onChange={tempInput} aria-label="Text input with dropdown button" />
                             <select defaultValue={'nothing'} className='dropdown rounded mx-2' id="select1">
-                                <option value="nothing" disabled >Choose a Temperature</option>
+                                <option value="nothing" disabled >Select the Input Temperature</option>
                                 <option value="celsius">Celsius</option>
                                 <option value="fahrenheit">Fahrenheit</option>
                                 <option value="kelvin">Kelvin</option>
@@ -84,31 +84,28 @@ const Converter = () => {
                 <div className="row mb-3">
                     <div className="col">
 
-                        {/* <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Temp.</button> */}
-                        {/* <ul className="dropdown-menu dropdown-menu-end">
+                        {/* <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Temp.</button>
+                        <ul className="dropdown-menu dropdown-menu-end">
                             <li className="dropdown-item">Celcius</li>
                             <li className="dropdown-item">Fahrenheit</li>
                             <li className="dropdown-item">Kelvin</li>
                         </ul> */}
                         <select defaultValue={'nothing'} className='dropdown rounded' id="select2">
-                            <option className='bg-white' value="nothing" disabled>Choose a Temperature</option>
+                            <option className='bg-white' value="nothing" disabled>Select the Output Temperature</option>
                             <option value="celsius">Celsius</option>
                             <option value="fahrenheit">Fahrenheit</option>
                             <option value="kelvin">Kelvin</option>
                         </select>
                     </div>
                     <div className="col">
-                        <button className="btn btn-primary" onClick={handleClick}>Convert</button>
+                        <button className="btn btn-primary w-75 h-100" onClick={handleClick}>Convert</button>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
                         <div className="input-group mb-2">
-                            <label htmlFor="disabled-input">Result: </label>
-                            {/* <input type="number" id='disabled-input' className="form-control mx-2 mb-2"  aria-label="Disabled input with dropdown button" disabled readOnly /> */}
-                            <div className="mx-2 mb-2">
-                                <p id='disabled-input'></p>
-                            </div>
+                            <label className='mt-2 h6' htmlFor="disabled-input">Result: </label>
+                            <input type="number" id='disabled-input' className="form-control mx-2 mb-2" aria-label="Disabled input with dropdown button" disabled readOnly />
                         </div>
                     </div>
                 </div>
