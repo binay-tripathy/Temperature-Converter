@@ -23,3 +23,6 @@ input[type=number]{
 .error{
   margin-left: 20%;
 }
+.card{
+  background-color: #c3c3c37d;
+}
